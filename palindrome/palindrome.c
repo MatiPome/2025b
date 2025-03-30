@@ -9,7 +9,6 @@ int is_palindrome(char s[]){
     for(i = 0; s[i] != '\0'; i++){
         if(!isspace(s[i])){
         str1[j++] = s[i];
-
       }
     }
     str1[j] = '\0';
