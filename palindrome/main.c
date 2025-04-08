@@ -4,40 +4,46 @@
 #include <ctype.h>
 
 int main() {
+    char str[81];
+    int i;
+    int valid;
 
-   char str[81];
-   int i;
-   printf("Program started\n");
-   printf("Enter your string: ");
-   if(fgets(str, 81, stdin) == NULL) {
-     printf("Input error\n");
-     return 1;
-   }
-   str[strcspn(str, "\n")] = '\0';  /* remove newline */
+    printf("Enter your string: ");
+
+    while (fgets(str, sizeof(str), stdin) != NULL) {
+        str[strcspn(str, "\n")] = '\0';  /* Remove newline */
+
+        if (str[0] == '\0') {
+            printf("The string is empty\n");
+            printf("Exit code: 1\n");
+        } else {
+            valid = 1;
+            for (i = 0; str[i] != '\0'; i++) {
+                if (!isalpha((unsigned char)str[i]) && !isspace((unsigned char)str[i])) {
+                    printf("Your string contains invalid character '%c'\n", str[i]);
+                    printf("Exit code: 1\n");
+                    valid = 0;
+                    break;
+                }
+            }
+
+            if (valid) {
+                if (is_palindrome(str)) {
+                    printf("Your string \"%s\" is a palindrome\n", str);
+                    printf("Exit code: 0\n");
+                } else {
+                    printf("Your string \"%s\" isn't a palindrome\n", str);
+                    printf("Exit code: 1\n");
+
+                }
+            }
+        }
 
 
-   for(i = 0; str[i] != '\0'; i++){
-     if (!isalpha(str[i]) && !isspace(str[i])){
-       printf("your string contains invalid character %c\n", str[i]);
-       return 1;
-     }
-   }
+        printf("Enter your string: ");
+    }
 
-   if ( str[0] == '\0') {
-     printf("your string is empty\n");
-     return 1;
-   }
-
-   if(is_palindrome(str) == 1) {
-     printf("Your string is palindrome\n");
-   return 0;
-   }
-   else{
-     printf("Your string is not a palindrome\n");
-   return 1;
-   }
-
-
-   }
+    return 0;
+}
 
 

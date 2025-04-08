@@ -1,0 +1,15 @@
+Enter your string:
+Your string "poop" is a palindrome
+Enter your string:
+Your string "park" isn't a palindrome
+Enter your string:
+Your string "river is sirevir" is a palindrome
+Enter your string:
+Your string "martinitram" is a palindrome
+Enter your string:
+Your string "my face ecafym" is a palindrome
+Enter your string:
+Your string "neuquen" is a palindrome
+Enter your string:
+Your string "come backcab emoc" is a palindrome
+Enter your string:
