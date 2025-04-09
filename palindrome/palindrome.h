@@ -1,10 +1,14 @@
 #ifndef PALINDROME_H
 #define PALINDROME_H
 
-int is_palindrome(char s[]); /* receives a string, returns 1 if is palindrome, 0 otherwise.*/
+/*
+ * is_palindrome:
+ *   Receives a string.
+ *   Returns 1 if the string is a palindrome (ignoring spaces), 0 otherwise.
+ */
+int is_palindrome(char s[]);
 
-
-#endif
+#endif /* PALINDROME_H */
 
 
 
