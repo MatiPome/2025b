@@ -1,0 +1,5 @@
+Enter a number in decimal format: The number of zeros in the binary format is: 30
+The number of zeros in the binary format is: 30
+The number of zeros in the binary format is: 27
+The number of zeros in the binary format is: 26
+The number of zeros in the binary format is: 31
