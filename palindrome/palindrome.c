@@ -28,6 +28,7 @@ int is_palindrome(char s[]){
     left++;
     right--;
   }
+
   return 1;
   }
 
