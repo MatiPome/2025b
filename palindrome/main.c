@@ -1,3 +1,10 @@
+/**
+ * This program receives a word and checks if it's a palindrome or not
+ * words can have spaces between them, as long as the letters are a palindrome
+ * The maximum number of characters allowed is 80
+ * The program can receive both input files or direct input from users.
+ */
+
 #include <stdio.h>
 #include "palindrome.h"
 #include <string.h>
