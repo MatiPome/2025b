@@ -1,0 +1,50 @@
+
+Enter your string: 
+The word you entered is: po o p
+ 
+The return value is: 1 
+
+------------------------------------------------
+Enter your string: 
+
+The word you entered is: p ark
+ 
+The return value is: 0 
+
+------------------------------------------------
+Enter your string: 
+
+The word you entered is: riv er is sirevir
+ 
+The return value is: 1 
+
+------------------------------------------------
+Enter your string: 
+
+The word you entered is: mart in itram
+ 
+The return value is: 1 
+
+------------------------------------------------
+Enter your string: 
+
+The word you entered is: my face ec afym
+ 
+The return value is: 1 
+
+------------------------------------------------
+Enter your string: 
+
+The word you entered is: neuquen
+ 
+The return value is: 1 
+
+------------------------------------------------
+Enter your string: 
+
+The word you entered is: come ba ck cab em oc
+ 
+The return value is: 1 
+
+------------------------------------------------
+Enter your string: 
