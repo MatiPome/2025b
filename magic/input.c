@@ -3,6 +3,8 @@
 
 int read_matrix(int matrix[N][N], FILE *source) {
     int row, col, count = 1;
+    int result;
+    int extra;
 
     printf("Welcome to the magic square analyzer\n\n");
     printf("The magic square consists of %d rows and columns.\n", N);
@@ -11,7 +13,7 @@ int read_matrix(int matrix[N][N], FILE *source) {
     for (row = 0; row < N; row++) {
         for (col = 0; col < N; col++) {
             printf("Please enter the number for your magic square (%d out of %d):\n", count, N * N);
-            int result = fscanf(source, "%d", &matrix[row][col]);
+            result = fscanf(source, " %d", &matrix[row][col]);
 
             if (result == EOF)
                 return STATUS_TOO_FEW;
@@ -22,10 +24,10 @@ int read_matrix(int matrix[N][N], FILE *source) {
         }
     }
 
-    int extra;
-    if (fscanf(source, "%d", &extra) == 1) {
-        return STATUS_TOO_MANY;
-    }
+
+        if (fscanf(source, " %d", &extra) == 1) {
+            return STATUS_TOO_MANY;
+        }
 
     return STATUS_SUCCESS;
 }

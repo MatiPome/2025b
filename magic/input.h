@@ -2,9 +2,9 @@
 #define INPUT_H
 
 #include <stdio.h>
-#include "magic.h"  // for N
+#include "magic.h"
 
-// Input error codes
+/* Input error codes */
 #define STATUS_SUCCESS 0
 #define STATUS_FAILURE 1
 #define STATUS_NOT_INTEGER 2

@@ -11,10 +11,6 @@ int main(int argc, char *argv[]) {
 
     if (argc == 2) {
         source = fopen(argv[1], "r");
-        if (source == NULL) {
-            print_error_file(argv[1]);
-            return 1;
-        }
     }
 
     result = read_matrix(matrix, source);
