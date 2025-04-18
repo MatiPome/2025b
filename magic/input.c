@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "input.h"
 
-Status read_matrix(int matrix[N][N], FILE *source) {
+int read_matrix(int matrix[N][N], FILE *source) {
     int row, col, count = 1;
 
     printf("Welcome to the magic square analyzer\n\n");

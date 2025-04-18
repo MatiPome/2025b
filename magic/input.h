@@ -2,15 +2,15 @@
 #define INPUT_H
 
 #include <stdio.h>
-#include "magic.h"
+#include "magic.h"  // for N
 
-typedef enum {
-    STATUS_SUCCESS = 0,
-    STATUS_NOT_INTEGER,
-    STATUS_TOO_MANY,
-    STATUS_TOO_FEW
-} Status;
+// Input error codes
+#define STATUS_SUCCESS 0
+#define STATUS_FAILURE 1
+#define STATUS_NOT_INTEGER 2
+#define STATUS_TOO_MANY 3
+#define STATUS_TOO_FEW 4
 
-Status read_matrix(int matrix[N][N], FILE *source);
+int read_matrix(int matrix[N][N], FILE *source);
 
 #endif
