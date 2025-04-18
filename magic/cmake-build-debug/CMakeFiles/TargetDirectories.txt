@@ -1,0 +1,3 @@
+C:/Users/matut/CLionProjects/2025b/magic/cmake-build-debug/CMakeFiles/magic.dir
+C:/Users/matut/CLionProjects/2025b/magic/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/matut/CLionProjects/2025b/magic/cmake-build-debug/CMakeFiles/rebuild_cache.dir
