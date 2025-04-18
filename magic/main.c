@@ -21,12 +21,12 @@ int main(int argc, char *argv[]) {
     if (result != STATUS_SUCCESS) {
         print_input_error(result);
         if (source != stdin) fclose(source);
-        return 1;
+        return STATUS_FAILURE;
     }
 
     magic_square = magic(matrix);
     print_result(magic_square);
 
     if (source != stdin) fclose(source);
-    return 0;
+    return STATUS_SUCCESS;
 }
