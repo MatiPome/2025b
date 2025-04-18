@@ -24,5 +24,7 @@ int main(int argc, char *argv[]) {
     print_result(magic_square);
 
     if (source != stdin) fclose(source);
+
+    print_matrix(matrix);
     return STATUS_SUCCESS;
 }

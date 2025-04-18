@@ -10,6 +10,7 @@
 #define STATUS_NOT_INTEGER 2
 #define STATUS_TOO_MANY 3
 #define STATUS_TOO_FEW 4
+#define MAX_LINE_LENGTH 100
 
 int read_matrix(int matrix[N][N], FILE *source);
 
