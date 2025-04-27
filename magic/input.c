@@ -14,7 +14,7 @@ int read_matrix(int matrix[N][N], FILE *source) {
     printf("Please input a total of %d numbers (space-separated in one line or multiple lines).\n", N * N);
 
     while (count < N * N && fgets(line, sizeof(line), source)) {
-        token = strtok(line, " \t\n");
+        token = strtok(line, " \t\n\v\f\r");
         while (token != NULL) {
             if (sscanf(token, "%d", &value) != 1) {
                 return STATUS_NOT_INTEGER;
