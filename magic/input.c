@@ -1,157 +1,141 @@
-#include <stdio.h>
-#include <string.h>
-#include "input.h"
-
-int read_matrix(int matrix[N][N], FILE *source) {
-    char line[80];
-    int row = 0, col = 0;
-    char *token;
-    int count = 0;
-    int value = 0;
-
-    printf("Welcome to the magic square analyzer\n\n");
-    printf("The magic square consists of %d rows and columns.\n", N);
-    printf("Please input a total of %d numbers (space-separated in one line or multiple lines).\n", N * N);
-
-    while (count < N * N && fgets(line, sizeof(line), source)) {
-        token = strtok(line, " \t\n\v\f\r");
-        while (token != NULL) {
-            if (sscanf(token, "%d", &value) != 1) {
-                return STATUS_NOT_INTEGER;
-            }
-
-            matrix[row][col] = value;
-            col++;
-            count++;
-            if (col == N) {
-                col = 0;
-                row++;
-            }
-            if (count > N * N) {
-                return STATUS_TOO_MANY;
-            }
-
-            token = strtok(NULL, " \t\n");
-        }
-
-    }
-
-    if (count < N * N) {
-        return STATUS_TOO_FEW;
-    }
-
-    return STATUS_SUCCESS;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#include <stdio.h>     /* For FILE, fgets, fprintf, sscanf */
+#include <string.h>    /* For strtok */
+#include "input.h"     /* For constants like N and status codes */
+#include <stdlib.h>    /* For strtol, malloc, free */
+#include <limits.h>    /* For INT_MAX, INT_MIN */
+#include <errno.h>     /* For errno, ERANGE */
 
 
 /*
-int read_matrix(int matrix[N][N], FILE *source) {
-    char line[256];
-    char *token;
-    int count = 0;
-    int value;
-    int row = 0, col = 0;
+ * Reads a square matrix of integers from the given input source.
+ * Returns a status code based on input validity:
+ *  - STATUS_SUCCESS if input was correctly formatted
+ *  - STATUS_TOO_FEW if fewer than N*N numbers are provided
+ *  - STATUS_TOO_MANY if more than N*N numbers are parsed
+ *  - STATUS_NOT_INTEGER if a non-integer token is encountered
+ *
+ * Also sets *invalidFlag to 1 if any duplicate or out-of-range values are found.
+ */
+int read_matrix(int matrix[N][N], FILE *source, int *invalidFlag) {
+    char line[MAX_LINE_LENGTH];        /* Buffer for each input line */
+    int seen[N * N] = {0};             /* Flags to detect duplicates (1..N^2) */
+    int row = 0, col = 0;              /* Matrix position trackers */
+    char *token;                       /* Pointer to current token from line */
+    int count = 0;                     /* Total numbers successfully read */
+    int value = 0;                     /* Holds integer value of current token */
+    int invalid = 0;                   /* Flag for duplicates or out-of-range */
 
-    printf("Welcome to the magic square analyzer\n\n");
-    printf("The magic square consists of %d rows and columns.\n", N);
-    printf("Please input a total of %d numbers (space-separated in one line or multiple lines).\n", N * N);
+    /* Introductory messages written to stderr */
+    fprintf(stderr, "Welcome to the magic square analyzer\n\n");
+    fprintf(stderr, "The magic square consists of %d rows and columns.\n", N);
+    fprintf(stderr, "Please input a total of %d numbers (space-separated in one line or multiple lines).\n", N * N);
 
-    while (count < N * N && fgets(line, sizeof(line), source) != NULL) {
-        token = strtok(line, " \t\n");
+    /* Read input until we have N*N values or reach EOF */
+    while (count < N * N && fgets(line, sizeof(line), source)) {
+
+        /* Tokenize the line using standard whitespace delimiters */
+        token = strtok(line, " \t\n\v\f\r");
+
         while (token != NULL) {
-            if (sscanf(token, "%d", &value) != 1) {
+
+            /* Convert token to integer; fail if not a valid number */
+
+            if (!check_int(token, &value)) {
                 return STATUS_NOT_INTEGER;
             }
 
+            /* Check for overflow — we already reached N*N values */
+            if (count >= N * N) {
+                return STATUS_TOO_MANY;
+            }
+
+            /* Check if value is out of range or already seen */
+            if (value < 1 || value > N * N || seen[value - 1]) {
+                invalid = 1;
+            } else {
+                seen[value - 1] = 1;  /* Mark value as seen */
+            }
+
+            /* Store the value in the matrix */
             matrix[row][col] = value;
-            count++;
             col++;
+            count++;
+
+            /* Move to the next row if current row is filled */
             if (col == N) {
                 col = 0;
                 row++;
             }
 
-            if (count > N * N) {
-                return STATUS_TOO_MANY;
-            }
-
-            token = strtok(NULL, " \t\n");
+            /* Advance to next token in the same line */
+            token = strtok(NULL, " \t\n\v\f\r");
         }
     }
 
+    /* If fewer values were read than required, report error */
     if (count < N * N) {
         return STATUS_TOO_FEW;
     }
 
+    /* Set the output flag to indicate if any input was invalid */
+    *invalidFlag = invalid;
+
+    /* If everything else was fine, return success */
     return STATUS_SUCCESS;
 }
 
 
+/*
+ * check_int:
+ *  Attempts to parse a string into an integer.
+ *  Returns 1 if successful, 0 otherwise.
+ *  The result is stored in *out if valid.
+ */
+int check_int(const char *str, int *out) {
+    char *end;
+    long val;
 
+    errno = 0;  /* Reset errno before conversion */
+    val = strtol(str, &end, 10);  /* Convert string to long */
 
+    /* Check if nothing was parsed */
+    if (end == str)
+        return 0;
 
+    /* Check for trailing non-digit characters */
+    if (*end != '\0')
+        return 0;
 
+    /* Check for overflow or underflow */
+    if (errno == ERANGE || val > INT_MAX || val < INT_MIN)
+        return 0;
 
-
- int row, col, count = 1;
- int result;
- int extra;
-
- printf("Welcome to the magic square analyzer\n\n");
- printf("The magic square consists of %d rows and columns.\n", N);
- printf("Please input a total of %d numbers.\n", N * N);
-
- for (row = 0; row < N; row++) {
-     for (col = 0; col < N; col++) {
-         printf("Please enter the number for your magic square (%d out of %d):\n", count, N * N);
-
-         result = fscanf(source, "%d", &matrix[row][col]);
-         if (result == EOF) {
-             return STATUS_TOO_FEW;
-         }
-         if (result == 0) {
-             return STATUS_NOT_INTEGER;
-         }
-
-         count++;
-     }
- }
-
-
-
-
-     if (fscanf(source, "%d", &extra) == 1) {
-         return STATUS_TOO_MANY;
-     }
-
- printf("All numbers entered. Press Ctrl+D (or Ctrl+Z on Windows) to finish.\n");
-
- return STATUS_SUCCESS;
+    /* All checks passed, assign value */
+    *out = (int)val;
+    return 1;
 }
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
