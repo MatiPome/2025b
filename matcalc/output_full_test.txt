@@ -1,0 +1,104 @@
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Values successfully inserted!
+Please insert your command (type 'stop' to exit):
+      1.00      2.00      3.00      4.00
+      5.00      6.00      7.00      8.00
+      9.00     10.00     11.00     12.00
+     13.00     14.00     15.00     16.00
+Please insert your command (type 'stop' to exit):
+Values successfully inserted!
+Please insert your command (type 'stop' to exit):
+     16.00     15.00     14.00     13.00
+     12.00     11.00     10.00      9.00
+      8.00      7.00      6.00      5.00
+      4.00      3.00      2.00      1.00
+Please insert your command (type 'stop' to exit):
+successfully add_mat
+Please insert your command (type 'stop' to exit):
+      2.00      4.00      6.00      8.00
+     10.00     12.00     14.00     16.00
+     18.00     20.00     22.00     24.00
+     26.00     28.00     30.00     32.00
+Please insert your command (type 'stop' to exit):
+successfully mul_scalar
+Please insert your command (type 'stop' to exit):
+     -7.00    -14.00    -21.00    -28.00
+    -35.00    -42.00    -49.00    -56.00
+    -63.00    -70.00    -77.00    -84.00
+    -91.00    -98.00   -105.00   -112.00
+Please insert your command (type 'stop' to exit):
+Values successfully inserted!
+Please insert your command (type 'stop' to exit):
+successfully trans_mat
+Please insert your command (type 'stop' to exit):
+successfully trans_mat
+Please insert your command (type 'stop' to exit):
+      1.00      2.00      3.00      4.00
+      5.00      6.00      7.00      8.00
+      9.00     10.00     11.00     12.00
+     13.00     14.00     15.00     16.00
+Please insert your command (type 'stop' to exit):
+Values successfully inserted!
+Please insert your command (type 'stop' to exit):
+      1.00      2.00      3.00      4.00
+      0.00      0.00      0.00      0.00
+      0.00      0.00      0.00      0.00
+      0.00      0.00      0.00      0.00
+Please insert your command (type 'stop' to exit):
+      0.00      0.00      0.00      0.00
+      0.00      0.00      0.00      0.00
+      0.00      0.00      0.00      0.00
+      0.00      0.00      0.00      0.00
+Please insert your command (type 'stop' to exit):
+successfully add_mat
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'Read_Mat'
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'Add_Mat'
+Please insert your command (type 'stop' to exit):
+Values successfully inserted!
+Please insert your command (type 'stop' to exit):
+      1.00      2.00      3.00      4.00
+      5.00      6.00      7.00      8.00
+      9.00     10.00     11.00     12.00
+     13.00     14.00     15.00     16.00
+Please insert your command (type 'stop' to exit):
+Values successfully inserted!
+Please insert your command (type 'stop' to exit):
+10000000000.00      0.00      3.14      0.00
+ -99999.00      1.23      4.56      7.89
+      0.00      0.00      0.00      0.00
+      0.00      0.00      0.00      0.00
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'hello'
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'banana_mat'
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'mul_mat'
+Please insert your command (type 'stop' to exit):
+[ERROR] Unexpected extra input
+Please insert your command (type 'stop' to exit):
+[ERROR] Unexpected value after last argument
+Please insert your command (type 'stop' to exit):
+Values successfully inserted!
+Please insert your command (type 'stop' to exit):
+[ERROR] Missing comma before value 1
+Please insert your command (type 'stop' to exit):
+[ERROR] Missing value at position 2
+Please insert your command (type 'stop' to exit):
+[ERROR] Invalid float at position 2
+Please insert your command (type 'stop' to exit):
+[ERROR]Matrix name missing
+Please insert your command (type 'stop' to exit):
+[ERROR] Trailing comma after last value
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'print_mat'
+Please insert your command (type 'stop' to exit):
+[ERROR] Need at least one value
+Please insert your command (type 'stop' to exit):
+successfully trans_mat
+Please insert your command (type 'stop' to exit):
+argument after stop
+Please insert your command (type 'stop' to exit):
+program terminated

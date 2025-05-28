@@ -1,0 +1,36 @@
+=== Running test1_valid_magic.txt ===
+   8    1    6 
+   3    5    7 
+   4    9    2 
+The matrix is a magic square.
+
+=== Running test2_duplicate.txt ===
+   5    5    5 
+   5    5    5 
+   5    5    5 
+The matrix is not a magic square.
+
+=== Running test3_out_of_range.txt ===
+   8    1    6 
+   3    5    7 
+   4    9   10 
+The matrix is not a magic square.
+
+=== Running test4_not_enough.txt ===
+Input error: not enough numbers (early EOF).
+
+=== Running test5_too_many.txt ===
+Input error: too many numbers in input.
+
+=== Running test6_non_integer.txt ===
+Input error: expected an integer.
+
+=== Running test6_v2_non_integer.txt ===
+Input error: expected an integer.
+
+=== Running test7_wrong_sum.txt ===
+   1    2    3 
+   4    5    6 
+   7    8    9 
+The matrix is not a magic square.
+

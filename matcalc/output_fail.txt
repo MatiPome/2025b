@@ -1,0 +1,140 @@
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid matrix name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Matrix name missing
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid matrix name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma before value 1
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid float at position 1
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing value at position 1
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing value at position 2
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid float at position 2
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma before value 3
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid float at position 4
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma before value 2
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected extra input
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected extra input
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+No matrix name.
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected extra input
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma after first name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma after first name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing second comma
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected extra input
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+No matrix name.
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+No matrix name.
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid matrix name.
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid matrix name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected extra input
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'sub_mat'
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma after first name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing second comma
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+No matrix name.
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid matrix name.
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Undefined command or missing args: 'mul_mat'
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma after first name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing second comma
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Invalid matrix name.
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+missing comma after first value
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+missing comma after first value
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+no scalar found in input
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+no scalar found in input
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+missing comma after second value
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected value after last argument
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing matrix name 1
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected value after last argument
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma after first matrix
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing comma after first matrix
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Missing matrix name
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected input after last parameter
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):
+Unexpected input after last parameter
+Welcome to the Matrix calculator!
+Please insert your command (type 'stop' to exit):

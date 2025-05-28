@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/matcalc.dir/mainmat.c.o CMakeFiles/matcalc.dir/mymat.c.o -o matcalc 

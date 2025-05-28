@@ -1,0 +1,38 @@
+read_mat MAT_A, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+print_mat MAT_A
+read_mat MAT_B, 16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1
+print_mat MAT_B
+add_mat MAT_A, MAT_A, MAT_A
+print_mat MAT_A
+mul_scalar MAT_A, -3.5, MAT_C
+print_mat MAT_C
+read_mat MAT_D, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+trans_mat MAT_D, MAT_D
+trans_mat MAT_D, MAT_D
+print_mat MAT_D
+read_mat MAT_E, 1,2,3,4
+print_mat MAT_E
+print_mat MAT_F
+add_mat MAT_F, MAT_F, MAT_E
+Read_Mat MAT_A, 1,2,3,4
+Add_Mat MAT_A, MAT_B, MAT_C
+read_mat MAT_C, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+print_mat MAT_C
+read_mat MAT_B, 1e10, 2e-10, 3.14159, 0, -99999, 1.23, 4.56, 7.89, 0, 0, 0, 0, 0, 0, 0, 0
+print_mat MAT_B
+hello world
+banana_mat command
+mul_mat
+add_mat MAT_A, MAT_B, MAT_C, MAT_D
+mul_scalar MAT_A, 2.5, MAT_B, extra
+read_mat     MAT_A    ,   1 , 2 , 3
+read_mat MAT_A 1 2 3
+read_mat MAT_A,1,,2,3
+read_mat MAT_A,1,abc,3
+read_mat ,1,2,3
+read_mat MAT_A,1,2,3,
+print_mat
+read_mat MAT_A
+trans_mat MAT_A,MAT_A
+stop now
+stop

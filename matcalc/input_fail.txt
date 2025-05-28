@@ -1,0 +1,47 @@
+read_mat              // Missing matrix name
+read_mat ,1,2,3       // Name missing
+read_mat MAT_X,1,2    // Invalid matrix name
+read_mat MAT_A        // No comma or values
+read_mat MAT_A,       // Comma but no values
+read_mat MAT_A,,1,2   // Double comma
+read_mat MAT_A,1,,2   // Missing value between commas
+read_mat MAT_A,1,abc  // Invalid float
+read_mat MAT_A,1,2.3.4 // Malformed float
+read_mat MAT_A,1,2,3, // Trailing comma
+read_mat MAT_A,1 2 3  // Missing commas
+print_mat             // Missing matrix name
+print_mat MAT_X       // Invalid matrix name
+print_mat ,           // Garbage name
+print_mat MAT_A MAT_B // Too many arguments
+add_mat               // Missing all arguments
+add_mat MAT_A         // Missing second and third
+add_mat MAT_A, MAT_B  // Missing destination
+add_mat MAT_A, MAT_B, // Trailing comma
+add_mat MAT_A, , MAT_C // Empty second matrix
+add_mat ,MAT_B,MAT_C  // Missing first matrix
+add_mat MAT_X, MAT_B, MAT_C // Invalid first name
+add_mat MAT_A, MAT_Y, MAT_C // Invalid second name
+add_mat MAT_A, MAT_B, MAT_Z // Invalid destination
+sub_mat
+sub_mat MAT_A
+sub_mat MAT_A, MAT_B
+sub_mat MAT_A, , MAT_C
+sub_mat MAT_A, MAT_B, MAT_Y
+mul_mat
+mul_mat MAT_A
+mul_mat MAT_A, MAT_B
+mul_mat MAT_X, MAT_B, MAT_C
+mul_scalar                    // No args
+mul_scalar MAT_A              // Missing scalar + target
+mul_scalar MAT_A,             // Comma but no scalar
+mul_scalar MAT_A, abc, MAT_C  // Invalid float
+mul_scalar MAT_A, 3.14        // Missing target
+mul_scalar MAT_A, 3.14,       // Trailing comma
+mul_scalar ,3.14,MAT_C        // Missing source
+mul_scalar MAT_A, 3.14, MAT_X // Invalid target name
+trans_mat                     // Missing args
+trans_mat MAT_A              // Missing destination
+trans_mat , MAT_B            // Missing source
+trans_mat MAT_A,             // Trailing comma
+trans_mat MAT_A, MAT_X       // Invalid destination
+stop
